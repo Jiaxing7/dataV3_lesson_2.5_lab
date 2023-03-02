@@ -13,7 +13,7 @@ SELECT MAX(length) AS max_duration, MIN(length) AS min_duration
 FROM film;     
 
 -- 4
-SELECT length AS hours, length*60 AS minutes FROM film;
+SELECT sec_to_time(AVG(length)*60) AS average_duration FROM film;
 
 -- 5
 SELECT COUNT(DISTINCT last_name) FROM actor;
